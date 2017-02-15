@@ -37,14 +37,16 @@ public class Cylinder extends Shape {
 	}
 
 	// Constructor that initializes a new instance of a Cylinder.
-	public Cylinder(float radius, float height) {
+	public Cylinder(float radius, float height) throws IllegalArgumentException {
 		// Make sure positive dimensions were entered by user.
-		while(radius < 0 || height < 0) {
-			JOptionPane.showMessageDialog(null, "Cannot create a cylinder! All dimensions must be positive numbers.");
+		if(radius <= 0 || height <= 0) {
+			throw new IllegalArgumentException();
+			//JOptionPane.showMessageDialog(null, "Cannot create a cylinder! All dimensions must be positive numbers.");
 			//TODO: Have user enter positive values for all dimensions of cylinder.
-		}
+		} else {
 		setRadius(radius);
 		setHeight(height);
+		}
 	}
 	
 	// Calculates and returns the surface area for this Cylinder instance.

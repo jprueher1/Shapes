@@ -12,13 +12,13 @@ public class ShapesTest {
 	public static void main(String[] args) {
 		
 		// Create new instance of a Cuboid Shape.
-		Shape cuboid = new Cuboid(8, 8, 8);
+		Shape cuboid = new Cuboid(7, 5, 3);
 		
 		// Create new instance of a Cylinder Shape.
-		Shape cylinder = new Cylinder(0, 0);
+		Shape cylinder = new Cylinder(2, 5);
 		
 		// Create new instance of a Sphere Shape.
-		Shape sphere = new Sphere(0);
+		Shape sphere = new Sphere(4);
 		
 		// Call the cuboid's render method to display the dimensions, volume and surface area via a message box.
 		cuboid.render();

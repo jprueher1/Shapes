@@ -50,17 +50,19 @@ public class Cuboid extends Shape {
 	}
 	
 	// Constructor to initialize a new Cuboid instance.
-	public Cuboid(float width, float height, float depth) {
+	public Cuboid(float width, float height, float depth) throws IllegalArgumentException {
 		
 		// Check to make sure all dimensions of this Cuboid instance are not negative.
-		while(width < 0 || height < 0 || depth < 0){
-			JOptionPane.showMessageDialog(null, "Cannot create a cuboid! All dimensions must be positive numbers.");
+		if(width <= 0 || height <= 0 || depth <= 0){
+			throw new IllegalArgumentException();
+			//JOptionPane.showMessageDialog(null, "Cannot create a cuboid! All dimensions must be positive numbers.");
 			//TODO: Have user enter positive values for all dimensions of this Cuboid instance.
-		}
+		} else {
 		
 		setWidth(width);
 		setHeight(height);
 		setDepth(depth);
+		}
 	}
 
 	// Calculates and returns the surface area of this Cuboid instance.

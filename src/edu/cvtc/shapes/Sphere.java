@@ -2,6 +2,8 @@ package edu.cvtc.shapes;
 
 import javax.swing.JOptionPane;
 
+
+
 /**
  * @author Josh Prueher
  *
@@ -24,13 +26,15 @@ public class Sphere extends Shape {
 	}
 	
 	// Constructor that initializes a new Sphere instance.
-	public Sphere(float radius) {
+	public Sphere(float radius) throws IllegalArgumentException {
 		// Make sure a positive number was entered, don't let program continue until one is.
-		while(radius < 0){
-			JOptionPane.showMessageDialog(null, "Cannot create a sphere, radius must be a positive number");
+		if(radius <= 0){
+			throw new IllegalArgumentException();
+			//JOptionPane.showMessageDialog(null, "Cannot create a sphere, radius must be a positive number");
 			// TODO Ask user to enter a positive number for radius
-		} 
+		} else {
 		setRadius(radius);
+		}
 		
 	}
 
@@ -54,5 +58,8 @@ public class Sphere extends Shape {
 		JOptionPane.showMessageDialog(null, "Radius = " + getRadius()
 		+  " Volume = " + volume() + " Surface Area = " + surfaceArea());
 	}
+	
+
+	
 
 }
