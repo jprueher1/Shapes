@@ -72,7 +72,7 @@ public class Cylinder extends Shape implements Renderer {
 	/*	JOptionPane.showMessageDialog(null, "Cylinder height = " + getHeight() + " Radius = " + getRadius()
 		+  " Volume = " + volume() + " Surface Area = " + surfaceArea()); */
 		getDialog().show("Cylinder height = " + getHeight() + " Radius = " + getRadius()
-		+  " Volume = " + volume() + " Surface Area = " + surfaceArea(), "title");
+		+  " Volume = " + volume() + " Surface Area = " + surfaceArea(), "Cylinder");
 	}
 
 	

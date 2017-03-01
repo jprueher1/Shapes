@@ -13,23 +13,26 @@ public class ShapesTest {
 		
 		Dialog dialog = new MessageBox();
 		
+		ShapeFactory shapeFactory = new ShapeFactory(dialog);
+		
 		// Create new instance of a Cuboid Shape.
-		Cuboid cuboid = new Cuboid(dialog, 4, 4, 4);
+		Cuboid defaultCuboid = shapeFactory.makeCuboid(13,17,16);
 		
 		// Create new instance of a Cylinder Shape.
-		Cylinder cylinder = new Cylinder(dialog, 4, 4);
+		Cylinder defaultCylinder = shapeFactory.makeCylinder(12,12);
 		
 		// Create new instance of a Sphere Shape.
-		Sphere sphere = new Sphere(dialog, 4);
+		Sphere defaultSphere = shapeFactory.makeSphere(122);
 		
 		// Call the cuboid's render method to display the dimensions, volume and surface area via a message box.
-		cuboid.render();
+		defaultCuboid.render();
 		
 		// Call the cylinder's render method to display the dimensions, volume and surface area via a message box.
-		cylinder.render();
+		defaultCylinder.render();
 		
 		// Call the sphere's render method to display the dimensions, volume and surface area via a message box.
-		sphere.render();
+		defaultSphere.render();
+		
 		
 	}
 	

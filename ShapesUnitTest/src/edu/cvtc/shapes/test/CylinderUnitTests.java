@@ -1,14 +1,12 @@
 package edu.cvtc.shapes.test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
-//import org.junit.runner.RunWith;
 
 import edu.cvtc.shapes.Cylinder;
 import edu.cvtc.shapes.test.substitutes.MessageBoxSub;
-//import junitparams.JUnitParamsRunner;
+
 
 /**
  * @author Josh Prueher
